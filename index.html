@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="jumbotron text-white" style="background-color: gray;">
+                    <h1>
+                        Weather Dashboard
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 justify-content-center">
+            <div class="card">
+                <div class="card-body">  
+                    <label>Search city:</label>
+                    <br>
+                    <input type="text" id="citySearch">
+                    <input class="btn btn-primary" type="submit" id="searchBttn" value="Search">
+                    <br>
+                    <div id="cityView"></div>
+                    
+                </div>  
+            </div>
+        </div>        
+        <div class="col-lg-6 justify-content-center">
+            <div class="card">
+                <div class="card-body">
+                    <h3 id="cityDate"></h3>
+                    <p>Temperature: <span id="temp"></span></p>
+                    <br>
+                    <p>Humidity: <span id="hum"></span></p>
+                    <br>
+                    <p>Wind Speed: <span id="speed"></span></p>
+                    <br>
+                    <p>UV Index: <span id="uv"></span></p>
+                </div>
+
+            </div>
+            <br>
+            <h3>
+                5 Day Forecast:
+            </h3>
+            <br>
+            <div id="forecastview" class="fiveDay">
+                <div class="card-custom" style="background-color: indigo;">
+                    <div class="card-body text-white">
+                       <p> 
+                         Temp:<span id=""></span>    
+                        </p>
+                        <br>
+                        <p>
+                        Humidity:<span id=""></span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="card-custom" style="background-color: indigo;">
+                    <div class="card-body text-white">
+                        <p>
+                         Temp:<span id=""></span> 
+                        </p>
+                        <br>
+                        <p>
+                        Humidity:<span id=""></span>
+                        </p>
+
+                    </div>
+                    
+                </div>
+                <div class="card-custom" style="background-color: indigo;">
+                    <div class="card-body text-white">
+                        <p>
+                         Temp:<span id=""></span>   
+                        </p>
+                        <br>
+                        <p>
+                        Humidity:<span id=""></span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="card-custom" style="background-color: indigo;">
+                    <div class="card-body text-white">
+                      
+                        <p>
+                         Temp:<span id=""></span>
+                        </p>
+                        <br>
+                        <p>
+                        Humidity:<span id=""></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-custom" style="background-color: indigo;">
+                    <div class="card-body text-white">
+                        <p>
+                         Temp:<span id=""></span>
+                        </p>
+                        <br>
+                        <p>
+                        Humidity:<span id=""></span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>    
+        </div>    
+    </div>    
+    
+    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+*{
+    margin: 0 5px 0 5px;
+}
+.cityBttn{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.fiveDay{
+    display: flex;
+}
+
+.card-custom{
+    border-radius: 5px;
+    width: 128px;
+    flex-direction: row;
+}
