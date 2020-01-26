@@ -17,36 +17,38 @@ function getWeather(searchEl) {
     })
       .then(function(response){
         console.log(response)
-        var tempF = (response.list[0].main.temp - 273.15) * 1.80 + 32;
-       
         
+       function uvIndex(response){
+        let uvLat = (response.city.coord.lat)
+        let uvLon = (response.city.coord.lon)
+        $.ajax({
+          url: "http://api.openweathermap.org/data/2.5/uvi?appid=407dcbd909ab3fe803d6bfc0fc8541ab&lat="+ uvLat +"&lon="+ uvLon,
+          method: 'get'
+        })
+        .then(function(response2){
+          console.log(response2)
+          }) 
+      }    
+          let newDate = new Date(response.list[0].main.dt_txt)
+          let newDay = newDate.getDate();
+          let tempF = (response.list[0].main.temp - 273.15) * 1.80 + 32;
+          uvIndex(response)
           renderBttn(searchEl)
-        // $("#cityDate").append(response.list[0].dt_txt)
-      // $("#temp").append(Math.floor(tempF))
+      $("#cityDate").append(newDay);
+      $("#temp").append(Math.floor(tempF))
       // $("#hum").append(response.list[0].main.humidity)
       // $("#speed").append(response.list[0].wind.speed) 
       
       }); 
 }
 
-function uvIndex(response){
-        let uvLat = (response.city.coord.lat)
-        let uvLon = (response.city.coord.lon)
-        $.ajax({
-          url: "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=407dcbd909ab3fe803d6bfc0fc8541ab&lat="+ uvLat +"&lon="+ uvLon +"&cnt={cnt}",
-          method: 'get'
-        })
-        .then(function(response2){
-          console.log(response2)
-          }) 
-          
-      }
+
 
 
 $("#searchBttn").click(function(){
   let searchEl = document.getElementById("citySearch").value;
   getWeather(searchEl)  
-  uvIndex()  
+    
 
   });
 
