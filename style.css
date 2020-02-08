@@ -8,6 +8,10 @@
     margin: 5px;
 }
 
+.cityBttn:focus{
+    background-color: chartreuse;
+}
+
 .fiveDay{
     display: flex;
 }
