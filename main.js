@@ -13,6 +13,7 @@ function emptyAll() {
   $("#temp").empty()
   $("#hum").empty()
   $("#speed").empty()
+  $('#uv').empty()
   $('#bug0').removeAttr('src')
   $('#bug1').removeAttr('src')
   $('#bug2').removeAttr('src')
