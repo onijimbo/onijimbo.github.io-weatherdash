@@ -35,9 +35,12 @@ function emptyAll() {
   $('#hum3').empty()
   $('#hum4').empty()
 }
-for(i=0; i<searchHistory.length;i++){
-  renderBttn(searchHistory[i])
+if(searchHistory.length === null || searchHistory.length === 0){
+  for(i=0; i<searchHistory.length;i++){
+    renderBttn(searchHistory[i])
+  }
 }
+
 function renderBttn(searchEl) {
   
   let cityDiv = $("<div class='name'>");
