@@ -6,7 +6,6 @@ const today = currentDateTime
 
 let searchHistory = JSON.parse(localStorage.getItem('cities'))
 
-
 function emptyAll() {
   $("#cityDate").empty()
   $('#icon1').empty()
@@ -35,7 +34,7 @@ function emptyAll() {
   $('#hum3').empty()
   $('#hum4').empty()
 }
-if(searchHistory.length === "null" || searchHistory.length === 0){
+if(searchHistory != null){
   for(i=0; i<searchHistory.length;i++){
     renderBttn(searchHistory[i])
   }
