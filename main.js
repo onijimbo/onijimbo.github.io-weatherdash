@@ -64,7 +64,7 @@ function getWeather(searchEl) {
       const icon = response1.weather[0].icon
       const icon1 = $('<img>')
       icon1.attr({
-        'src': "http://openweathermap.org/img/w/" + icon + ".png",
+        'src': "https://openweathermap.org/img/w/" + icon + ".png",
         'alt': response1.weather[0].description
       })
       $("#cityDate").append(month[currentDateTime.getMonth()] + '/' + currentDateTime.getDate() + '/' + currentDateTime.getFullYear());
@@ -84,7 +84,7 @@ function getWeather(searchEl) {
             let uvLat = (response.city.coord.lat)
             let uvLon = (response.city.coord.lon)
             $.ajax({
-              url: "http://api.openweathermap.org/data/2.5/uvi?appid=407dcbd909ab3fe803d6bfc0fc8541ab&lat=" + uvLat + "&lon=" + uvLon,
+              url: "https://api.openweathermap.org/data/2.5/uvi?appid=407dcbd909ab3fe803d6bfc0fc8541ab&lat=" + uvLat + "&lon=" + uvLon,
               method: 'get'
             })
               .then(function (response2) {
@@ -98,7 +98,7 @@ function getWeather(searchEl) {
             let newDate1 = new Date(response.list[i].dt_txt)
             let newDay1 = month[newDate1.getMonth()] + '/' + newDate1.getDate() + '/' + newDate1.getFullYear();
             let icon = response.list[i].weather[0].icon
-            $('#bug'+i/8).attr({'src': "http://openweathermap.org/img/w/" + icon + ".png"})
+            $('#bug'+i/8).attr({'src': "https://openweathermap.org/img/w/" + icon + ".png"})
             $('#date'+i/8).append(newDay1)
             $('#Temp'+i/8).append(response.list[i].main.temp)
             $('#hum'+i/8).append(response.list[i].main.humidity)
