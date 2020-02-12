@@ -35,7 +35,7 @@ function emptyAll() {
   $('#hum3').empty()
   $('#hum4').empty()
 }
-if(searchHistory.length === null || searchHistory.length === 0){
+if(searchHistory.length === "null" || searchHistory.length === 0){
   for(i=0; i<searchHistory.length;i++){
     renderBttn(searchHistory[i])
   }
